@@ -10,9 +10,11 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="bootstrap, bootstrap4" />
 
-	<meta name="description" content="Empower your business with premium clothing supplies, delivering unmatched quality and style to captivate your customers effortlessly.">
-    <meta name="keywords" content="Customised Manufacturing, Private Labeling, White Labeling, 24/7 Support, Packaging, International shipping, Sustainability, Timely Delivery, Hoodies, T-Shirt, Over Size T-Shirt, Hoodies, man Hoodies, Printed Shirt, Polo T-Shirt, Full Sleeve T-Shirt, Round Neck T-Shirt, jeans, Clothing Export, Fashion, Apparel, Garments, Textiles, Wholesale, Supplier, Manufacturer, Exporter, Fashion Industry, Clothing Business, Wholesale Clothing, Apparel Supplier, Fashion Export, Garment Export, Textile Export, Clothing Supplier, Fashion Supplier, Trendy Clothing, Fashionable Apparel, Stylish Garments, Export Quality Clothing, Clothing Manufacturer, Textile Manufacturer, Clothing Distributor, Fashion Distributor, Clothing Wholesaler, Fashion Wholesaler, Garment Wholesaler, Textile Wholesaler, Clothing Retailer, Fashion Retailer, Garment Retailer, Textile Retailer, Clothing Brand, Fashion Brand, Garment Brand, Textile Brand, High-Quality Clothing, Premium Apparel, Top-notch Garments, Quality Textiles">
-    <title>The Styles Park - Best Clothing Supplier For Your Business</title>
+	<meta name="description"
+		content="Empower your business with premium clothing supplies, delivering unmatched quality and style to captivate your customers effortlessly.">
+	<meta name="keywords"
+		content="Customised Manufacturing, Private Labeling, White Labeling, 24/7 Support, Packaging, International shipping, Sustainability, Timely Delivery, Hoodies, T-Shirt, Over Size T-Shirt, Hoodies, man Hoodies, Printed Shirt, Polo T-Shirt, Full Sleeve T-Shirt, Round Neck T-Shirt, jeans, Clothing Export, Fashion, Apparel, Garments, Textiles, Wholesale, Supplier, Manufacturer, Exporter, Fashion Industry, Clothing Business, Wholesale Clothing, Apparel Supplier, Fashion Export, Garment Export, Textile Export, Clothing Supplier, Fashion Supplier, Trendy Clothing, Fashionable Apparel, Stylish Garments, Export Quality Clothing, Clothing Manufacturer, Textile Manufacturer, Clothing Distributor, Fashion Distributor, Clothing Wholesaler, Fashion Wholesaler, Garment Wholesaler, Textile Wholesaler, Clothing Retailer, Fashion Retailer, Garment Retailer, Textile Retailer, Clothing Brand, Fashion Brand, Garment Brand, Textile Brand, High-Quality Clothing, Premium Apparel, Top-notch Garments, Quality Textiles">
+	<title>The Styles Park - Best Clothing Supplier For Your Business</title>
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -42,6 +44,41 @@
 		  }
 		}
 		</script>
+
+	<script>
+		function submitForm() {
+			var form = document.getElementById("contactForm");
+			var submitBtn = document.getElementById("submitBtn");
+			form.addEventListener("submit", function (event) {
+				event.preventDefault(); 
+				submitBtn.disabled = true; 
+				var loader = document.createElement("span");
+				loader.className = "loader"; 
+				submitBtn.appendChild(loader); 
+				var formData = new FormData(form);
+				fetch("https://script.google.com/macros/s/AKfycbwuuZkLjjF9YoTGwE_yqVf--ZvaB7Z4jbwg2iJrmUR6KNeyBwM0U_Ib2OnlAF6E0Ok-/exec", {
+					method: "POST",
+					body: formData
+				})
+					.then(response => {
+						if (response.ok) {
+							alert("Your message received!");
+							form.reset();
+						} else {
+							alert("An error occurred. Please try again.");
+						}
+					})
+					.catch(error => {
+						console.error('Error:', error);
+						alert("An error occurred. Please try again.");
+					})
+					.finally(() => {
+						submitBtn.removeChild(loader);
+						submitBtn.disabled = false;
+					});
+			});
+		}
+	</script>
 </head>
 
 <body>
@@ -136,7 +173,8 @@
 									placeholder="Post your query now, and we'll get in touch with you soon!" name=""
 									class="form-control" id="message" cols="30" rows="5"></textarea>
 							</div>
-							<button id="submitBtn" type="submit" class="btn btn-primary-hover-outline d-flex align-items-center">Send
+							<button id="submitBtn" type="submit"
+								class="btn btn-primary-hover-outline d-flex align-items-center">Send
 								Message</button>
 						</form>
 						<script>
@@ -177,10 +215,13 @@
 							</div>
 							<div class="service-contents">
 								<h6>Location</h6>
-								<p>301-304 Maruti Chambers - 395008, India</p>
+								<p>
+									301-304 Maruti Chambers - 395008, India
+									<br />
+									Am Hombach 7,Melsungen 34212. Germany
+								</p>
 							</div>
 						</div>
-
 
 						<div class="service no-shadow align-items-center link horizontal d-flex active"
 							data-aos="fade-left" data-aos-delay="0">
@@ -193,10 +234,13 @@
 							</div>
 							<div class="service-contents">
 								<h6>Email</h6>
-								<p>info@thestylespark.co</p>
+								<p>
+									info@thestylespark.co
+									<br />
+									komal.aghera@thestylespark.co
+								</p>
 							</div>
 						</div>
-
 
 						<div class="service no-shadow align-items-center link horizontal d-flex active"
 							data-aos="fade-left" data-aos-delay="0">
@@ -240,7 +284,8 @@
 						<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
 						<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
 						<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
-						<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+						<li><a target="_blank" href="https://www.linkedin.com/in/the-stylespark/"><span
+									class="fa fa-brands fa-linkedin"></span></a></li>
 					</ul>
 				</div>
 
@@ -271,6 +316,7 @@
 								<li><a href="#">IEC Code: AAVFT7553Q</a></li>
 								<li><a href="#">+91-93131 05360</a></li>
 								<li><a href="#">info@thestylespark.co</a></li>
+								<li><a href="#">komal.aghera@thestylespark.co</a></li>
 							</ul>
 						</div>
 					</div>
