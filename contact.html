@@ -50,11 +50,11 @@
 			var form = document.getElementById("contactForm");
 			var submitBtn = document.getElementById("submitBtn");
 			form.addEventListener("submit", function (event) {
-				event.preventDefault(); 
-				submitBtn.disabled = true; 
+				event.preventDefault();
+				submitBtn.disabled = true;
 				var loader = document.createElement("span");
-				loader.className = "loader"; 
-				submitBtn.appendChild(loader); 
+				loader.className = "loader";
+				submitBtn.appendChild(loader);
 				var formData = new FormData(form);
 				fetch("https://script.google.com/macros/s/AKfycbwuuZkLjjF9YoTGwE_yqVf--ZvaB7Z4jbwg2iJrmUR6KNeyBwM0U_Ib2OnlAF6E0Ok-/exec", {
 					method: "POST",
@@ -294,16 +294,16 @@
 						<div class="col-6 col-sm-6 col-md-4">
 							<ul class="list-unstyled">
 								<li><a href="#"><b style="font-weight: 600;">Useful Links</b></a></li>
-								<li><a href="#">About us</a></li>
-								<li><a href="#">Product</a></li>
-								<li><a href="#">Services</a></li>
+								<li><a href="about.html">About us</a></li>
+								<li><a href="shop.html">Product</a></li>
+								<li><a href="services.html">Services</a></li>
 							</ul>
 						</div>
 
 						<div class="col-6 col-sm-6 col-md-4">
 							<ul class="list-unstyled">
 								<li><a href="#"><b style="font-weight: 600;">Links</b></a></li>
-								<li><a href="#">Contact us</a></li>
+								<li><a href="contact.html">Contact us</a></li>
 								<li><a href="#">Terms &amp; Conditions</a></li>
 								<li><a href="#">Privacy Policy</a></li>
 							</ul>
